@@ -51,7 +51,7 @@ h1 {
 }
 
 .overlay {
-	background: rgba(0, 0, 0, 0.15);
+	background: rgba(239, 227, 227, 0.15);/*rgba(0, 0, 0, 0.15);*/
     position: absolute;
     height: 100%;
     z-index: 1;
@@ -131,12 +131,17 @@ h1 {
 		  position: absolute;
 		  left: 50%;
 		  bottom: 0;
+		  top: -136px;
 		  min-width: 100%;
 		  min-height: 100%;
 		  -webkit-transform: translate3d(0, 0, 0);
 		          transform: translate3d(0, 0, 0);
 		  -webkit-transform: translateX(-50%);
 		          transform: translateX(-50%);
+
+          @media (min-width: 320px) and (max-width: 767px) {
+				left: 0%;
+			}
 		}
 	}
 }
