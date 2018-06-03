@@ -18,9 +18,9 @@
 <style type="text/css">
 
 </style>
-<body style="height:2800px;">
+<body>
 	<header>
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light nav-down">
 		  <a class="navbar-brand" href="#">MyShoot</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -130,7 +130,7 @@
 			</div>
 		</div><!--wrapper closed-->
 
-		<div class="parallaxContainer"><!--parallaxContainer start-->
+		<div class="parallaxContainer vendors"><!--parallaxContainer start-->
 		    <div class="section">
 		      <div class="container">
 		        <div class="row">
@@ -138,12 +138,22 @@
 		        </div>
 
 		        <div class="row">
-		        	<div class="col-md-12">
-		        		<div class="col-md-4">Send your requirements to multiple vendors</div>
-		        		<div class="col-md-4">Get Quotes on your phone & compare</div>
-		        		<div class="col-md-4">Book the best vendor!</div>
-		        	</div>
+		        	<ul class="col-md-12">
+		        		<li class="col-md-4 col-sm-12">
+		        			<div class="col-md-4 icon"><img src="img/icon/note.svg"/></div>
+		        			<div class="col-md-8 content">Send your requirements to multiple vendors</div>
+		        		</li>
+		        		<li class="col-md-4 col-sm-12">
+		        			<div class="col-md-4 icon"><img src="img/icon/smartphone.svg"/></div>
+		        			<div class="col-md-8 content">Get Quotes on your phone & compare</div>
+		        		</li>
+		        		<li class="col-md-4 col-sm-12">
+			        		<div class="col-md-4 icon"><img src="img/icon/profile.svg"/></div>
+			        		<div class="col-md-8 content">Book the best vendor!</div>
+		        		</li>
+		        	</ul>
 	        	</div>
+
 		      </div>
 		    </div>
 		    <div class="parallax">
@@ -153,6 +163,51 @@
 
 
 	</div><!--outer-wrapper closed-->
+	<footer>
+		
+	</footer>
+
+		<script type="text/javascript">
+			// http://codepen.io/viriava/pen/LxLYRP
+		ScrollHideNav = function(domRef) {
+		// Hide Header on on scroll down		
+		//this.didScroll;
+		this.lastScrollTop = 0;
+		this.delta = 5;
+		this.navbarHeight = $(domRef).outerHeight();		
+		this.domRef = domRef;
+		var instance = this;
+
+		this.hasScrolled = function() {
+		    var st = $(window).scrollTop();
+		    
+		    // Make sure they scroll more than delta
+		    /*if(Math.abs(lastScrollTop - st) <= delta)
+		        return;*/
+		    
+		    // If they scrolled down and are past the navbar, add class .nav-up.
+		    // This is necessary so you never see what is "behind" the navbar.
+		    if (st > instance.lastScrollTop /*&& st > navbarHeight*/){
+		        // Scroll Down
+		        $(instance.domRef).removeClass('nav-down').addClass('nav-up');
+		    } else {
+		        // Scroll Up
+		        if(st + $(window).height() < $(document).height()) {
+		            $(instance.domRef).removeClass('nav-up').addClass('nav-down');
+		        }
+		    }
+		    
+		    instance.lastScrollTop = st;
+		};		
+	};
+	var scrollHideNav = new ScrollHideNav('.navbar');
+
+	$(window).scroll(function(event){
+	    scrollHideNav.hasScrolled();   
+	});			
+			
+			
+		</script>
 
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

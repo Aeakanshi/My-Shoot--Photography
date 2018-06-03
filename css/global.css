@@ -3,6 +3,9 @@ body {
   /*font-family: 'Open Sans', sans-serif;*/
   font-family: 'Poppins', sans-serif; }
 
+header .navbar {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
 header .navbar.bg-light {
   background-color: #ffffff !important;
   -o-box-shadow: 0px 0px 25px -10px;
@@ -17,6 +20,9 @@ header .navbar button {
     color: #ffffff;
     background: #fa4a6f;
     border-color: #fa4a6f; }
+
+.nav-up {
+  top: -69px; }
 
 .outer-wrapper {
   /*display: flex;*/
@@ -117,9 +123,10 @@ h1 {
     .wrapper.shoot .shoot__type h2 {
       color: #555; }
     .wrapper.shoot .shoot__type a {
-      display: block;
       height: 100%;
+      display: block;
       padding-top: 40%;
+      min-height: 280px;
       background: center/cover no-repeat;
       position: relative;
       text-transform: none;
@@ -176,6 +183,41 @@ h1 {
             display: inline-block;
             vertical-align: middle;
             position: relative; }
+
+.vendors {
+  min-height: 300px; }
+  .vendors .row h2 {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .vendors .row ul {
+    width: 100%;
+    padding: 0;
+    margin: 3rem 0;
+    display: flex; }
+    .vendors .row ul li {
+      display: flex;
+      padding-left: 0;
+      text-align: left;
+      line-height: 20px;
+      align-items: center;
+      list-style-type: none; }
+      .vendors .row ul li .icon {
+        text-align: center; }
+        .vendors .row ul li .icon img {
+          position: relative;
+          width: 75%;
+          max-width: 68px;
+          min-width: 45px; }
+      .vendors .row ul li .content {
+        font-size: 18px;
+        line-height: 24px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); }
+
+footer {
+  background: #000000;
+  padding: 1rem 0; }
 
 /*.wrapper.shoot {*/
 	/*position: fixed;
