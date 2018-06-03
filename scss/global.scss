@@ -111,20 +111,6 @@ h1 {
 			}
   		}
 
-  	ul {
-		padding: 0;
-		width: 100%;
-		display: flex;
-		position: relative;
-		li {
-			display: flex;
-		justify-content: center;
-		}
-	}
-	  	
-  	
-
-
 	.parallax {
 	  position: absolute;
 	  top: 0;
@@ -156,44 +142,16 @@ h1 {
 }
 
 
-
-.row {
-	ul {
-		display: flex;
-		width: 100%;
-		padding: 0;
-		li {
-			width: (100%/3);
-			list-style-type: none;
-			display: flex;
-	       /* align-items: center; */
-	        justify-content: center;
-
-			a {
-				span {
-					  width: 250px;
-		              height: 250px;
-		              padding: 4rem;
-		              border-radius: 50%;
-		              background:$green;
-		              display: flex;
-		              flex-wrap: wrap;
-		              transition: box-shadow .25s;
-		              box-shadow: $shadow;
-				}
-				img {
-					width:100%;
-				}
-			}
-		}
-	}
-}
-
 .wrapper.shoot {
-	transition: box-shadow .25s;
 	box-shadow: $shadow;
+	text-align: center;
+	transition: box-shadow .25s;
 	.shoot__type {
 		padding: 1rem;
+
+		h2 {
+			color: #555;
+		}
 		a {
 			display: block;
 			height: 100%;
@@ -228,16 +186,20 @@ h1 {
 			    h2 {
 			    	letter-spacing: 0;
 				    color:$white;
-				    position: relative;
 				    font-size: 2.5em;
+				    position: relative;
+				    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 				    text-shadow: -0.98px 0.17731rem 2rem #000001;
 			    }
 
 		    .button {
-		    	display: block;
+	    	    display: flex;
+			    flex-wrap: wrap;
+			    justify-content: center;
+			    align-self: center;
 			    width: 9rem;
 			    padding: .5rem 1rem;
-			    margin: 0 auto;
+			    margin: 2rem auto 0 auto;
 			    position: relative;
 
 				   .background-container {
@@ -247,6 +209,7 @@ h1 {
 					    right: 0;
 					    bottom: 0;
 					    background: #000;
+					    box-shadow: 1px -1px 1px 1px $pink inset;
 					    -webkit-transform: skewX(-30deg);
 					    transform: skewX(-30deg);
 					    -webkit-backface-visibility: hidden;

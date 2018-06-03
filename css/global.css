@@ -82,14 +82,6 @@ h1 {
           @media (min-width: 320px) and (max-width: 767px) {
             .parallaxContainer section .banner-search .find button {
               position: relative; } }
-  .parallaxContainer ul {
-    padding: 0;
-    width: 100%;
-    display: flex;
-    position: relative; }
-    .parallaxContainer ul li {
-      display: flex;
-      justify-content: center; }
   .parallaxContainer .parallax {
     position: absolute;
     top: 0;
@@ -116,34 +108,14 @@ h1 {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: box-shadow .25s; }
 
-.row ul {
-  display: flex;
-  width: 100%;
-  padding: 0; }
-  .row ul li {
-    width: 33.33333%;
-    list-style-type: none;
-    display: flex;
-    /* align-items: center; */
-    justify-content: center; }
-    .row ul li a span {
-      width: 250px;
-      height: 250px;
-      padding: 4rem;
-      border-radius: 50%;
-      background: #009688;
-      display: flex;
-      flex-wrap: wrap;
-      transition: box-shadow .25s;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-    .row ul li a img {
-      width: 100%; }
-
 .wrapper.shoot {
-  transition: box-shadow .25s;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: box-shadow .25s; }
   .wrapper.shoot .shoot__type {
     padding: 1rem; }
+    .wrapper.shoot .shoot__type h2 {
+      color: #555; }
     .wrapper.shoot .shoot__type a {
       display: block;
       height: 100%;
@@ -174,14 +146,18 @@ h1 {
         .wrapper.shoot .shoot__type a .content-container h2 {
           letter-spacing: 0;
           color: #ffffff;
-          position: relative;
           font-size: 2.5em;
+          position: relative;
+          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
           text-shadow: -0.98px 0.17731rem 2rem #000001; }
         .wrapper.shoot .shoot__type a .content-container .button {
-          display: block;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-self: center;
           width: 9rem;
           padding: .5rem 1rem;
-          margin: 0 auto;
+          margin: 2rem auto 0 auto;
           position: relative; }
           .wrapper.shoot .shoot__type a .content-container .button .background-container {
             position: absolute;
@@ -190,6 +166,7 @@ h1 {
             right: 0;
             bottom: 0;
             background: #000;
+            box-shadow: 1px -1px 1px 1px #fa4a6f inset;
             -webkit-transform: skewX(-30deg);
             transform: skewX(-30deg);
             -webkit-backface-visibility: hidden;
