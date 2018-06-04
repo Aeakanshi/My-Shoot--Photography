@@ -101,7 +101,6 @@ h1 {
       position: absolute;
       left: 50%;
       bottom: 0;
-      top: -136px;
       min-width: 100%;
       min-height: 100%;
       -webkit-transform: translate3d(0, 0, 0);
@@ -219,6 +218,48 @@ h1 {
         font-size: 18px;
         line-height: 24px;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); }
+      .vendors .row ul li:after {
+        content: '';
+        background-image: url(../img/icon/share.svg);
+        width: 30px;
+        transform: rotate(35deg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 10px;
+        right: 32px;
+        position: absolute;
+        height: 100px; }
+      .vendors .row ul li:last-child:after {
+        background-image: none; }
+
+.grid section {
+  width: 100%;
+  text-align: center; }
+.grid .thumbs div {
+  padding: 2px; }
+  .grid .thumbs div a {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    justify-content: center; }
+    .grid .thumbs div a img {
+      width: 100%; }
+    .grid .thumbs div a:after {
+      content: '';
+      background: rgba(32, 35, 45, 0.5);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      display: block;
+      position: absolute;
+      border-radius: 3px; }
+    .grid .thumbs div a span {
+      position: absolute;
+      z-index: 56;
+      font-size: 1.5rem;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); }
 
 footer {
   background: #000000;
