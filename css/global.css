@@ -235,6 +235,8 @@ h1 {
 .grid section {
   width: 100%;
   text-align: center; }
+  .grid section h2 {
+    color: #555; }
 .grid .thumbs div {
   padding: 2px; }
   .grid .thumbs div a {
