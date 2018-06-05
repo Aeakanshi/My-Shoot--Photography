@@ -3,9 +3,13 @@ body {
   /*font-family: 'Open Sans', sans-serif;*/
   font-family: 'Poppins', sans-serif; }
 
+ul, li {
+  list-style: none; }
+
 header .navbar {
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
+  padding: 2rem;
+  /*padding-top:2rem; 
+  padding-bottom:2rem;*/ }
 header .navbar.bg-light {
   background-color: #ffffff !important;
   -o-box-shadow: 0px 0px 25px -10px;
@@ -84,11 +88,13 @@ h1 {
           color: #ffffff;
           border-radius: 0;
           background: #fa4a6f;
-          position: absolute;
-          border: none !important; }
-          @media (min-width: 320px) and (max-width: 767px) {
-            .parallaxContainer section .banner-search .find button {
-              position: relative; } }
+          position: relative;
+          border: none !important;
+          /*@media (min-width: 320px) and (max-width: 767px) {
+          	position: relative;
+          }*/ }
+          .parallaxContainer section .banner-search .find button:hover {
+            background: rgba(10, 10, 10, 0.82); }
   .parallaxContainer .parallax {
     position: absolute;
     top: 0;
@@ -262,6 +268,49 @@ h1 {
       font-size: 1.5rem;
       color: #fff;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); }
+
+.social {
+  z-index: 67;
+  position: fixed;
+  top: calc(432px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow .25s; }
+  .social a {
+    color: #fff;
+    display: block;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    margin-bottom: 1px;
+    z-index: 2; }
+    .social a:hover > span {
+      visibility: visible;
+      left: 41px;
+      opacity: 1; }
+    .social a span {
+      line-height: 40px;
+      left: 60px;
+      position: absolute;
+      text-align: center;
+      width: 120px;
+      visibility: hidden;
+      transition-duration: 0.5s;
+      z-index: 1;
+      opacity: 0; }
+  .social .facebook {
+    background-color: #00AAE5; }
+    .social .facebook span {
+      background-color: #00AAE5; }
+  .social .twitter {
+    background-color: #7D3895; }
+    .social .twitter span {
+      background-color: #7D3895; }
+  .social .instagram {
+    background-color: #ED2B29; }
+    .social .instagram span {
+      background-color: #ED2B29; }
 
 footer {
   background: #000000;

@@ -11,10 +11,15 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+ul, li {
+	list-style: none;
+}
+
 header {
 	.navbar {
-		padding-top:2rem; 
-		padding-bottom:2rem;
+		padding: 2rem;
+		/*padding-top:2rem; 
+		padding-bottom:2rem;*/
 	}
 	.navbar.bg-light {
 		background-color:$white ! important;
@@ -108,12 +113,16 @@ h1 {
 						color:$white;
     					border-radius: 0;
 						background: $pink;
-						position: absolute;
+						position: relative;
 						border:none !important; 
 
-						@media (min-width: 320px) and (max-width: 767px) {
-							position: relative;
+						&:hover{
+							background: rgba(10, 10, 10, 0.82);
 						}
+
+						/*@media (min-width: 320px) and (max-width: 767px) {
+							position: relative;
+						}*/
 					}	
 				}
 			}
@@ -346,6 +355,65 @@ h1 {
 		}
 
 	}
+}
+
+.social {
+    z-index: 67;
+	position: fixed;
+    top: calc(432px);
+	box-shadow: $shadow;
+    transition: box-shadow .25s;
+
+	a {
+	   color: #fff;
+	   display: block;
+	   height: 40px;
+	   position: relative;
+	   text-align: center;
+	   line-height: 40px;
+	   width: 40px;
+	   margin-bottom: 1px;
+	   z-index: 2;
+
+		&:hover>span{
+			visibility: visible;
+		  left: 41px;
+		  opacity: 1;
+		} 
+
+		span {
+			line-height: 40px;
+		    left: 60px;
+		    position: absolute;
+		    text-align: center;
+		    width: 120px;
+		    visibility: hidden;
+		    transition-duration: 0.5s;
+		    z-index: 1;
+		    opacity: 0;
+		}	
+	}
+
+	 .facebook{
+	 	background-color: #00AAE5;
+		span{
+			background-color: #00AAE5;
+		}
+	 }
+
+	 .twitter{
+	 	background-color: #7D3895;
+		span{
+			background-color: #7D3895;
+		}
+	 }
+
+	 .instagram{
+	 	background-color: #ED2B29;
+		span{
+			background-color: #ED2B29;
+		}
+	 }
 }
 
 footer {

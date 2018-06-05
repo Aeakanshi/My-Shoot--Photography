@@ -11,16 +11,16 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-	<!-- <script src="js/jquery.min.js"></script> -->
-	<!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
 	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="thirdParty/font-awesome/css/font-awesome.min.css">
+	<script src="thirdParty/js/jquery-1.11.4.min.js"></script>
 </head>
 <style type="text/css">
 
 </style>
 <body>
 	<header>
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light nav-down">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 		  <a class="navbar-brand" href="#">MyShoot</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -130,6 +130,7 @@
 			</div>
 		</div><!--wrapper closed-->
 
+	    
 		<div class="parallaxContainer vendors"><!--parallaxContainer start-->
 		    <div class="section">
 		      <div class="container">
@@ -225,55 +226,33 @@
 	    	</div>
 	    </div>
 
+	    <div class="social">
+	    	<div>
+		    	<a href="#" class="facebook" target="_blank">
+			    	<i class="fa fa-facebook"></i> 
+			    	<span>Facebook</span>
+		    	</a>
+		  	</div>
+		  	<div>
+		    	<a href="#" class="twitter" target="_blank">
+			    	<i class="fa fa-twitter"></i> 
+			    	<span>Facebook</span>
+		    	</a>
+		  	</div>
+		  	<div>
+		    	<a href="#" class="instagram" target="_blank">
+			    	<i class="fa fa-instagram"></i> 
+			    	<span>Facebook</span>
+		    	</a>
+		  	</div>
+		</div>
 
 	</div><!--outer-wrapper closed-->
 	<footer>
 		
 	</footer>
 
-		<script type="text/javascript">
-			// http://codepen.io/viriava/pen/LxLYRP
-		ScrollHideNav = function(domRef) {
-		// Hide Header on on scroll down		
-		//this.didScroll;
-		this.lastScrollTop = 0;
-		this.delta = 5;
-		this.navbarHeight = $(domRef).outerHeight();		
-		this.domRef = domRef;
-		var instance = this;
-
-		this.hasScrolled = function() {
-		    var st = $(window).scrollTop();
-		    
-		    // Make sure they scroll more than delta
-		    /*if(Math.abs(lastScrollTop - st) <= delta)
-		        return;*/
-		    
-		    // If they scrolled down and are past the navbar, add class .nav-up.
-		    // This is necessary so you never see what is "behind" the navbar.
-		    if (st > instance.lastScrollTop /*&& st > navbarHeight*/){
-		        // Scroll Down
-		        $(instance.domRef).removeClass('nav-down').addClass('nav-up');
-		    } else {
-		        // Scroll Up
-		        if(st + $(window).height() < $(document).height()) {
-		            $(instance.domRef).removeClass('nav-up').addClass('nav-down');
-		        }
-		    }
-		    
-		    instance.lastScrollTop = st;
-		};		
-	};
-	var scrollHideNav = new ScrollHideNav('.navbar');
-
-	$(window).scroll(function(event){
-	    scrollHideNav.hasScrolled();   
-	});			
-			
-			
-		</script>
-
-
+		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
