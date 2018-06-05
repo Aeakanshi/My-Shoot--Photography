@@ -13,6 +13,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 	<link rel="stylesheet" href="css/global.css">
 	<link rel="stylesheet" href="thirdParty/font-awesome/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="thirdParty/animate.css"> -->
 	<script src="thirdParty/js/jquery-1.11.4.min.js"></script>
 </head>
 <style type="text/css">
@@ -84,15 +85,55 @@
 			 </div>	
 		</div><!--parallaxContainer closed-->
 
+		<div class="registration">
+			<button type="button" class="main-btn-rect popup-btn  bounce" data-popup="popup-reg">Register as a Vendor</button>
+			<div id="popup-reg" class="popup">
+			  <div class="popup-content">
+			    <div class="event-header">
+			      <h6>It will be done by today, :)</h6>
+			    </div>
+			      <form id="send" class="send-form">
+			        <!-- <div class="form-group">
+			          <input type="text" placeholder="Enter name..." id="name" name="name" required="required">
+			          <label for="name">
+			            <i class="fa fa-user"></i>
+			          </label>
+			        </div>
+			        <div class="form-group">
+			          <input type="tel" placeholder="Enter phone..." id="phone" name="phone" required="required">
+			          <label for="phone">
+			            <i class="fa fa-phone"></i>
+			          </label>
+			        </div>
+			        <div class="form-group">
+			          <input type="email" placeholder="Enter mail..." id="mail" name="mail" required="required">
+			          <label for="mail">
+			            <i class="fa fa-envelope"></i>
+			          </label>
+			        </div>
+			        <div class="form-group">
+			          <textarea placeholder="Enter message..." name="text" id="text"></textarea>
+			          <label for="text" class="txt">
+			            <i class="fa fa-commenting"></i>
+			          </label>
+			        </div>
+			        <button type="submit" class="main-btn-rect" name="text" value="Send">
+			          <i class="fa fa-paper-plane"></i>Send</button> -->
+			      </form>
+			    <span class="fade-out main-btn-circle">╳</span>
+			  </div>
+			</div>
+		</div>
+
 		<div class="wrapper shoot"><!--wrapper start-->
 			<div class="container">
 				<div class="row">
-						<div class="col-md-12 shoot__type">
+						<div class="col-md-10 shoot__type">
 							<h2>EVERYTHING YOU NEED.</h2>
 							<p>Hi, We are the one who provides a seamless solution for all types of Photography and Videography. We have a range of photo artist which can make you day. We covers all types of event starting from a birthday party, family function, wedding shoot, prewedding shoot and all corporates shoots. We provide a wode range to our customers according to their requirements.</p>
 						</div>
 						<div class="col-md-6 shoot__type" style="border-right: 1px solid #eae6e6;" >
-							<a href="#" style="background-image: url(img/thumb/01.jpg)">
+							<a href="wedding.html" style="background-image: url(img/thumb/01.jpg)">
 								<div class="content-container">
 									<h2>Pre-Wedding</h2>
 									<div class="button scan-glitch">
@@ -229,7 +270,7 @@
 	    <div id="social">
 	    	<div class="icon">
 		    	<a href="#" class="share">
-			    	<i class="fa fa-share-alt"></i> 
+			    	<i class="fa fa-users"></i> 
 			    	<span>click me</span>
 		    	</a>
 		  	</div>
@@ -261,6 +302,10 @@
 		  	</ul>
 		</div>
 
+		<!------pop-up form start----->
+		
+		<!------pop-up form closed----->
+
 	</div><!--outer-wrapper closed-->
 	<footer>
 		
@@ -279,13 +324,27 @@
 		        $("#social").removeClass("change");
 		    }
 		});
+
 		$(document).ready(function(){
 			$("#social ul li").hide();
 		    $("#social .icon").click(function(){
 		        $("#social ul li").toggle( );
 		    });
-		});
 
+		    //pop-up form //https://codepen.io/0neLife/pen/jKPMwE
+
+		     $('.popup-btn').click(function(){ 
+			    var popupBlock = $('#'+$(this).data('popup'));
+			    popupBlock.addClass('active')
+			      .find('.fade-out').click(function(){
+			        popupBlock.css('opacity','0').find('.popup-content').css('margin-top','350px');        
+			        setTimeout(function(){
+			          $('.popup').removeClass('active');
+			          popupBlock.css('opacity','').find('.popup-content').css('margin-top','');
+			        }, 600);
+			      });
+			 });
+		});
 	</script>
 
 		
