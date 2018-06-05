@@ -226,37 +226,67 @@
 	    	</div>
 	    </div>
 
-	    <div class="social">
-	    	<div>
-		    	<a href="#" class="facebook" target="_blank">
-			    	<i class="fa fa-facebook"></i> 
-			    	<span>Facebook</span>
+	    <div id="social">
+	    	<div class="icon">
+		    	<a href="#" class="share">
+			    	<i class="fa fa-share-alt"></i> 
+			    	<span>click me</span>
 		    	</a>
 		  	</div>
-		  	<div>
-		    	<a href="#" class="whatsapp" target="_blank">
-			    	<i class="fa fa-whatsapp"></i> 
-			    	<span>Whatsapp</span>
-		    	</a>
-		  	</div>
-		  	<div>
-		    	<a href="#" class="email" target="_blank">
-			    	<i class="fa fa-envelope"></i> 
-			    	<span>Mail</span>
-		    	</a>
-		  	</div>
-		  	<div>
-		    	<a href="#" class="instagram" target="_blank">
-			    	<i class="fa fa-instagram"></i> 
-			    	<span>Instagram</span>
-		    	</a>
-		  	</div>
+		  	<ul>
+		    	<li>
+			    	<a href="#" class="facebook" target="_blank">
+				    	<i class="fa fa-facebook"></i> 
+				    	<span>Facebook</span>
+			    	</a>
+			  	</li>
+			  	<li>
+			    	<a href="#" class="whatsapp" target="_blank">
+				    	<i class="fa fa-whatsapp"></i> 
+				    	<span>Whatsapp</span>
+			    	</a>
+			  	</li>
+			  	<li>
+			    	<a href="#" class="email" target="_blank">
+				    	<i class="fa fa-envelope"></i> 
+				    	<span>Mail</span>
+			    	</a>
+			  	</li>
+			  	<li>
+			    	<a href="#" class="instagram" target="_blank">
+				    	<i class="fa fa-instagram"></i> 
+				    	<span>Instagram</span>
+			    	</a>
+			  	</li>
+		  	</ul>
 		</div>
 
 	</div><!--outer-wrapper closed-->
 	<footer>
 		
 	</footer>
+
+	<script>
+		//scroll for social share
+		$(window).scroll(function() {    
+		    var scroll = $(window).scrollTop();
+		     //console.log(scroll);
+		    if (scroll >= 50) {
+		        //console.log('a');
+		        $("#social").addClass("change");
+		    } else {
+		        //console.log('a');
+		        $("#social").removeClass("change");
+		    }
+		});
+		$(document).ready(function(){
+			$("#social ul li").hide();
+		    $("#social .icon").click(function(){
+		        $("#social ul li").toggle( );
+		    });
+		});
+
+	</script>
 
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -4,7 +4,9 @@ body {
   font-family: 'Poppins', sans-serif; }
 
 ul, li {
-  list-style: none; }
+  list-style: none;
+  padding: 0;
+  margin: 0; }
 
 header .navbar {
   padding: 2rem;
@@ -269,13 +271,13 @@ h1 {
       color: #fff;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); }
 
-.social {
+#social {
   z-index: 67;
   position: fixed;
-  top: calc(432px);
+  top: 18em;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: box-shadow .25s; }
-  .social a {
+  #social a {
     color: #fff;
     display: block;
     height: 40px;
@@ -285,11 +287,11 @@ h1 {
     width: 40px;
     margin-bottom: 1px;
     z-index: 2; }
-    .social a:hover > span {
+    #social a:hover > span {
       visibility: visible;
       left: 41px;
       opacity: 1; }
-    .social a span {
+    #social a span {
       line-height: 40px;
       left: 60px;
       position: absolute;
@@ -299,26 +301,35 @@ h1 {
       transition-duration: 0.5s;
       z-index: 1;
       opacity: 0; }
-  .social .facebook {
+  #social .share {
+    background-color: #fa4a6f; }
+    #social .share span {
+      background-color: #fa4a6f; }
+  #social .facebook {
     background-color: #4867aa; }
-    .social .facebook span {
+    #social .facebook span {
       background-color: #4867aa; }
-  .social .twitter {
+  #social .twitter {
     background-color: #7D3895; }
-    .social .twitter span {
+    #social .twitter span {
       background-color: #7D3895; }
-  .social .email {
+  #social .email {
     background-color: #d54b3d; }
-    .social .email span {
+    #social .email span {
       background-color: #d54b3d; }
-  .social .whatsapp {
+  #social .whatsapp {
     background-color: #4bc75a; }
-    .social .whatsapp span {
+    #social .whatsapp span {
       background-color: #4bc75a; }
-  .social .instagram {
+  #social .instagram {
     background-color: #cd2e8a; }
-    .social .instagram span {
+    #social .instagram span {
       background-color: #cd2e8a; }
+  #social.change {
+    top: 20% !important;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s; }
 
 footer {
   background: #000000;

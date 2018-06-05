@@ -13,6 +13,8 @@ body {
 
 ul, li {
 	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 header {
@@ -357,10 +359,10 @@ h1 {
 	}
 }
 
-.social {
+#social {
     z-index: 67;
 	position: fixed;
-    top: calc(432px);
+    top: 18em;
 	box-shadow: $shadow;
     transition: box-shadow .25s;
 
@@ -393,6 +395,13 @@ h1 {
 		    opacity: 0;
 		}	
 	}
+
+	 .share{
+	 	background-color: $pink;
+		span{
+			background-color: $pink;
+		}
+	 }
 
 	 .facebook{
 	 	background-color: #4867aa;
@@ -427,6 +436,13 @@ h1 {
 		span{
 			background-color: #cd2e8a;
 		}
+	 }
+
+	&.change {
+		 top: 20%!important;
+	    -webkit-transition: .5s;
+	    -moz-transition: .5s;
+	    transition: .5s;
 	 }
 }
 
